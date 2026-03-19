@@ -22,6 +22,7 @@ import javafx.stage.Stage;
  *
  * @author EscrituraRápida Team
  * @version 1.0
+ * alejo veñez
  */
 public class GameOverController {
 
