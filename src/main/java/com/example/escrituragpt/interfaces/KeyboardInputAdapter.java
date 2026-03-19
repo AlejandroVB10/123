@@ -53,6 +53,7 @@ public class KeyboardInputAdapter implements EventHandler<KeyEvent> {
     public void handle(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
             handler.onSubmitAnswer(inputField.getText());
+            //wkk
         }
     }
 }
