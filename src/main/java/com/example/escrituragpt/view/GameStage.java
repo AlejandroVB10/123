@@ -1,5 +1,6 @@
 package com.example.escrituragpt.view;
 
+import com.example.escrituragpt.service.AudioManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -45,5 +46,8 @@ public class GameStage {
         stage.setTitle("Escritura Rápida — ¡Juega!");
         stage.setScene(scene);
         stage.show();
+
+        // Play background music for the game
+        AudioManager.getInstance().playMusic("game", "game-theme.mp3");
     }
 }

@@ -2,6 +2,7 @@ package com.example.escrituragpt.view;
 
 import com.example.escrituragpt.controller.GameOverController;
 import com.example.escrituragpt.model.ScoreRecord;
+import com.example.escrituragpt.service.AudioManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -53,5 +54,8 @@ public class GameOverStage {
         stage.setTitle("Escritura Rápida — Fin del juego");
         stage.setScene(scene);
         stage.show();
+
+        // Play background music for the game-over screen
+        AudioManager.getInstance().playMusic("gameOver", "gameover-theme.mp3");
     }
 }

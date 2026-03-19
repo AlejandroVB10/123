@@ -1,5 +1,6 @@
 package com.example.escrituragpt.view;
 
+import com.example.escrituragpt.service.AudioManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -45,5 +46,8 @@ public class MenuStage {
         stage.setTitle("Escritura Rápida");
         stage.setScene(scene);
         stage.show();
+
+        // Play background music for the menu
+        AudioManager.getInstance().playMusic("menu", "menu-theme.mp3");
     }
 }

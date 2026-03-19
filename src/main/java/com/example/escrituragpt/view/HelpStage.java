@@ -1,5 +1,6 @@
 package com.example.escrituragpt.view;
 
+import com.example.escrituragpt.service.AudioManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -46,5 +47,8 @@ public class HelpStage {
         stage.setTitle("Escritura Rápida — Ayuda");
         stage.setScene(scene);
         stage.show();
+
+        // Play background music for the help screen
+        AudioManager.getInstance().playMusic("help", "help-theme.mp3");
     }
 }
