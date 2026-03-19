@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="620" prefWidth="900" style="-fx-background-color: #1C1C24;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.escrituragpt.controller.GameOverController">
+
+    <!-- ═══ CAPA DE FONDO GEOMÉTRICO ═══ -->
+    <Pane mouseTransparent="true">
+        <Circle centerX="80" centerY="80" fill="#2E1A1A" opacity="0.70" radius="120" />
+        <Circle centerX="820" centerY="60" fill="#1E2430" opacity="0.65" radius="90" />
+        <Circle centerX="40" centerY="560" fill="#2A1A1A" opacity="0.70" radius="70" />
+        <Circle centerX="860" centerY="540" fill="#1E2228" opacity="0.60" radius="110" />
+        <Circle centerX="450" centerY="310" fill="#242430" opacity="0.35" radius="200" />
+        <Circle centerX="450" centerY="310" fill="#C9A84C" opacity="0.025" radius="300" />
+        <Circle centerX="450" centerY="310" fill="#C9A84C" opacity="0.018" radius="270" />
+        <Line endX="900" endY="180" opacity="0.12" startX="720" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="140" opacity="0.09" startX="760" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="100" opacity="0.07" startX="800" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="180" endY="620" opacity="0.10" startX="0" startY="380" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="140" endY="620" opacity="0.08" startX="0" startY="420" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="820" endY="200" opacity="0.28" startX="80" startY="200" stroke="#6A5828" strokeWidth="1" />
+        <Line endX="820" endY="420" opacity="0.28" startX="80" startY="420" stroke="#6A5828" strokeWidth="1" />
+        <Circle centerX="155" centerY="155" fill="#C9A84C" opacity="0.50" radius="2.0" />
+        <Circle centerX="172" centerY="142" fill="#C9A84C" opacity="0.38" radius="1.4" />
+        <Circle centerX="755" centerY="90" fill="#C9A84C" opacity="0.48" radius="2.2" />
+        <Circle centerX="820" centerY="470" fill="#C9A84C" opacity="0.42" radius="2.0" />
+        <Circle centerX="60" centerY="310" fill="#C9A84C" opacity="0.28" radius="1.5" />
+        <Circle centerX="600" centerY="570" fill="#C9A84C" opacity="0.25" radius="1.5" />
+        <Text opacity="0.35" style="-fx-font-size: 7px; -fx-fill: #C9A84C;" text="◆" x="52" y="82" />
+        <Text opacity="0.30" style="-fx-font-size: 8px; -fx-fill: #C9A84C;" text="◆" x="848" y="52" />
+        <Text opacity="0.28" style="-fx-font-size: 7px; -fx-fill: #C9A84C;" text="◆" x="55" y="528" />
+        <Text opacity="0.30" style="-fx-font-size: 8px; -fx-fill: #C9A84C;" text="◆" x="840" y="525" />
+        <Text opacity="0.18" style="-fx-font-size: 28px;" text="✏️" x="750" y="130" />
+        <Text opacity="0.16" style="-fx-font-size: 26px;" text="📝" x="100" y="510" />
+        <Text opacity="0.16" style="-fx-font-size: 10px; -fx-fill: #C9A84C;" text="✦" x="108" y="295" />
+        <Text opacity="0.14" style="-fx-font-size: 8px;  -fx-fill: #C9A84C;" text="✦" x="792" y="385" />
+    </Pane>
+
+    <!-- ═══ CONTENEDOR PRINCIPAL ═══ -->
+    <VBox alignment="TOP_CENTER" spacing="0" style="-fx-background-color: transparent;">
+
+        <!-- ── BARRA SUPERIOR ── -->
+        <HBox alignment="CENTER_LEFT" prefHeight="64" prefWidth="900" style="-fx-background-color: #14141C; -fx-border-color: transparent transparent #C9A84C transparent; -fx-border-width: 0 0 1 0;">
+            <effect><DropShadow color="#000000" offsetY="3" radius="10" spread="0.05" /></effect>
+            <padding><Insets left="32" right="32" /></padding>
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Text fill="#f8f7f7" style="-fx-font-size: 26px;" text="✏️" />
+                <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #C9A84C;" text="Escritura Rápida" />
+            </HBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <!-- Badge "Fin del Juego" -->
+            <HBox alignment="CENTER" spacing="6" style="-fx-background-color: #22201A; -fx-background-radius: 20; -fx-border-color: #C9A84C; -fx-border-radius: 20; -fx-border-width: 1; -fx-padding: 6 16 6 16;">
+                <Text style="-fx-font-size: 14px;" text="🏆" />
+                <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 13px; -fx-fill: #C9A84C;" text="Fin del Juego" />
+            </HBox>
+        </HBox>
+
+        <!-- Línea decorativa -->
+        <Pane mouseTransparent="true" prefHeight="2" prefWidth="900" style="-fx-background-color: transparent;">
+            <Line endX="900" endY="1" opacity="0.20" startX="0" startY="1" stroke="#C9A84C" strokeWidth="1" />
+        </Pane>
+
+        <!-- ── ZONA CENTRAL ── -->
+        <StackPane VBox.vgrow="ALWAYS">
+            <Circle centerX="450" centerY="250" fill="#C9A84C" mouseTransparent="true" opacity="0.04" radius="240" />
+
+            <!-- Tarjeta central -->
+            <VBox alignment="CENTER" maxWidth="560" spacing="0" style="-fx-background-color: #26262E; -fx-background-radius: 28; -fx-border-color: #C9A84C; -fx-border-radius: 28; -fx-border-width: 1; -fx-padding: 40 52 40 52;">
+                <effect><DropShadow color="#C9A84C" offsetY="4" radius="32" spread="0.04" /></effect>
+
+                <!-- Título game over -->
+                <VBox alignment="CENTER" spacing="8" style="-fx-padding: 0 0 22 0;">
+                    <Text style="-fx-font-size: 42px;" text="💔" />
+                    <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 32px; -fx-font-weight: bold; -fx-fill: #C9A84C;" text="¡Juego Terminado!">
+                        <effect><DropShadow color="#C9A84C" offsetY="2" radius="16" spread="0.05" /></effect>
+                    </Text>
+                    <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 14px; -fx-fill: #606878;" text="¡Vuelve a intentarlo y supera tu récord!" />
+                </VBox>
+
+                <!-- Separador -->
+                <HBox alignment="CENTER" spacing="6" style="-fx-padding: 0 0 22 0;">
+                    <Line endX="80" endY="0" startX="0" startY="0" stroke="#5A4A1A" strokeWidth="1" />
+                    <Text style="-fx-font-size: 9px;  -fx-fill: #8A7030;" text="◇" />
+                    <Line endX="20" endY="0" startX="0" startY="0" stroke="#7A6830" strokeWidth="1" />
+                    <Text style="-fx-font-size: 13px; -fx-fill: #C9A84C;" text="✦" />
+                    <Line endX="20" endY="0" startX="0" startY="0" stroke="#7A6830" strokeWidth="1" />
+                    <Text style="-fx-font-size: 9px;  -fx-fill: #8A7030;" text="◇" />
+                    <Line endX="80" endY="0" startX="0" startY="0" stroke="#5A4A1A" strokeWidth="1" />
+                </HBox>
+
+                <!-- Resumen de estadísticas -->
+                <VBox alignment="CENTER" spacing="16" style="-fx-background-color: #1E1E28; -fx-background-radius: 14; -fx-border-color: #3A3828; -fx-border-radius: 14; -fx-border-width: 1; -fx-padding: 22 32 22 32;">
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Text style="-fx-font-size: 14px;" text="📊" />
+                        <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 13px; -fx-font-weight: bold; -fx-fill: #C9A84C;" text="Resumen de tu partida" />
+                    </HBox>
+
+                    <!-- Niveles completados -->
+                    <HBox alignment="CENTER_LEFT" spacing="14">
+                        <Text style="-fx-font-size: 20px;" text="🎯" />
+                        <VBox spacing="2">
+                            <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 12px; -fx-fill: #606878;" text="Niveles completados" />
+                            <Text fx:id="levelsCompletedLabel" style="-fx-font-family: 'Georgia'; -fx-font-size: 26px; -fx-font-weight: bold; -fx-fill: #C9A84C;" text="0" />
+                        </VBox>
+                    </HBox>
+
+                    <!-- Tiempo restante -->
+                    <HBox alignment="CENTER_LEFT" spacing="14">
+                        <Text style="-fx-font-size: 20px;" text="⏱" />
+                        <VBox spacing="2">
+                            <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 12px; -fx-fill: #606878;" text="Tiempo al finalizar" />
+                            <Text fx:id="timeRemainingLabel" style="-fx-font-family: 'Georgia'; -fx-font-size: 15px; -fx-fill: #ffffff;" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Botón Reiniciar -->
+                <VBox alignment="CENTER" style="-fx-padding: 28 0 0 0;">
+                    <Button fx:id="restartButton" onAction="#onRestartButtonClicked" prefHeight="50" prefWidth="220" style="-fx-background-color: linear-gradient(to right, #8A6818, #C9A84C); -fx-background-radius: 25; -fx-text-fill: #1C1810; -fx-font-family: 'Georgia'; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand; -fx-border-color: #E0C070; -fx-border-radius: 25; -fx-border-width: 0.8;" text="↺   Reiniciar">
+                        <effect><DropShadow color="#8A6818" offsetY="4" radius="14" spread="0.10" /></effect>
+                    </Button>
+                </VBox>
+
+            </VBox>
+        </StackPane>
+
+        <!-- Línea decorativa sobre footer -->
+        <Pane mouseTransparent="true" prefHeight="2" prefWidth="900" style="-fx-background-color: transparent;">
+            <Line endX="900" endY="1" opacity="0.20" startX="0" startY="1" stroke="#C9A84C" strokeWidth="1" />
+        </Pane>
+
+        <!-- ── BARRA INFERIOR ── -->
+        <HBox alignment="CENTER" prefHeight="52" prefWidth="900" style="-fx-background-color: #14141C; -fx-border-color: #C9A84C transparent transparent transparent; -fx-border-width: 1 0 0 0;">
+            <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 12px; -fx-fill: #5A4A2A;" text="Mini Proyecto #1  ✦  Programación Orientada a Eventos" />
+        </HBox>
+
+    </VBox>
+</StackPane>

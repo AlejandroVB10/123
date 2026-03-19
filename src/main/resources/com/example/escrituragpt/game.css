@@ -1,0 +1,115 @@
+/* ============================================================
+   game.css  —  Escritura Rápida · Game Screen Styles
+   Applied on top of styles.css only during gameplay.
+   ============================================================ */
+
+/* ---------- Status bar ---------- */
+.status-bar {
+    -fx-background-color: #16213e;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 30px 10px 30px;
+    -fx-border-color: #0f3460;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+.status-label {
+    -fx-text-fill: #c0c0e0;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.status-sublabel {
+    -fx-text-fill: #6070a0;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-letter-spacing: 1px;
+}
+
+.status-value-label {
+    -fx-text-fill: #c0c0e0;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.timer-label {
+    -fx-text-fill: #7ec8e3;
+}
+
+/* ---------- Timer warning (≤ 5 seconds) ---------- */
+.timer-warning {
+    -fx-text-fill: #ff9f43 !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(255,159,67,0.7), 8, 0, 0, 0);
+}
+
+/* ---------- Word display ---------- */
+.word-box {
+    -fx-background-color: #16213e;
+    -fx-background-radius: 14px;
+    -fx-border-color: #0f3460;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 22px 30px 22px 30px;
+    -fx-min-width: 480px;
+}
+
+.instruction-label {
+    -fx-text-fill: #8080a0;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.word-display {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-effect: dropshadow(three-pass-box, rgba(126,200,227,0.4), 10, 0, 0, 1);
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* ---------- Input field ---------- */
+.input-field {
+    -fx-background-color: #16213e;
+    -fx-text-fill: #f0f0f0;
+    -fx-prompt-text-fill: #5a5a7a;
+    -fx-font-size: 18px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-border-color: #0f3460;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 8px 14px 8px 14px;
+    -fx-alignment: center;
+}
+
+.input-field:focused {
+    -fx-border-color: #7ec8e3;
+    -fx-effect: dropshadow(three-pass-box, rgba(126,200,227,0.4), 8, 0, 0, 0);
+}
+
+/* ---------- Feedback label ---------- */
+.feedback-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-min-height: 30px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* Success state */
+.feedback-success {
+    -fx-text-fill: #26de81;
+    -fx-effect: dropshadow(three-pass-box, rgba(38,222,129,0.5), 8, 0, 0, 0);
+}
+
+/* Error state */
+.feedback-error {
+    -fx-text-fill: #fc5c65;
+    -fx-effect: dropshadow(three-pass-box, rgba(252,92,101,0.5), 8, 0, 0, 0);
+}

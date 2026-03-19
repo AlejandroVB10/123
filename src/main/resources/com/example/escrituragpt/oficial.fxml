@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<!--
+  ╔═══════════════════════════════════════════════════════════╗
+  ║   TEMA 1 — GRAFITO Y DORADO  ✦  EDICIÓN ELEVADA          ║
+  ║                                                           ║
+  ║   MEJORAS DECORATIVAS (estructura 100% intacta):          ║
+  ║   · Constelación de puntos dorados en el fondo            ║
+  ║   · Arco grande translúcido dorado detrás de la tarjeta   ║
+  ║   · Retícula diagonal sutil en esquinas                   ║
+  ║   · Diamantes ornamentales ◆ flotando en el fondo         ║
+  ║   · Doble filete dorado en barra superior e inferior      ║
+  ║   · Separador ampliado: ◇ ✦ ◇ con líneas más largas      ║
+  ║   · Marco interior (inner glow) en el post-it             ║
+  ║   · Microsombra adicional detrás de la tarjeta            ║
+  ╚═══════════════════════════════════════════════════════════╝
+-->
+
+<StackPane prefHeight="620" prefWidth="900" style="-fx-background-color: #1C1C24;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- ═══════════════════════════════════════════════════════
+         CAPA 1 — FONDO GEOMÉTRICO ENRIQUECIDO
+         Todo mouseTransparent, nunca interfiere con el juego
+    ═══════════════════════════════════════════════════════ -->
+    <Pane mouseTransparent="true">
+
+        <!-- ── Manchas de luz de fondo (círculos difusos originales) ── -->
+        <Circle centerX="80" centerY="80" fill="#2E2A1A" opacity="0.70" radius="120" />
+        <Circle centerX="820" centerY="60" fill="#1E2430" opacity="0.65" radius="90" />
+        <Circle centerX="40" centerY="560" fill="#28241A" opacity="0.70" radius="70" />
+        <Circle centerX="860" centerY="540" fill="#1E2228" opacity="0.60" radius="110" />
+        <Circle centerX="450" centerY="310" fill="#242430" opacity="0.35" radius="200" />
+
+        <!-- ── NUEVO: Arco de luz dorada detrás de la tarjeta ── -->
+        <!-- Gran halo circular que enmarca sutilmente la tarjeta central -->
+        <Circle centerX="450" centerY="310" fill="#C9A84C" opacity="0.028" radius="290" />
+        <Circle centerX="450" centerY="310" fill="#C9A84C" opacity="0.022" radius="260" />
+
+        <!-- ── NUEVO: Retícula diagonal esquina superior derecha ── -->
+        <Line endX="900" endY="180" opacity="0.12" startX="720" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="140" opacity="0.09" startX="760" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="100" opacity="0.07" startX="800" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="60" opacity="0.05" startX="840" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="900" endY="240" opacity="0.07" startX="660" startY="0" stroke="#C9A84C" strokeWidth="0.8" />
+
+        <!-- ── NUEVO: Retícula diagonal esquina inferior izquierda ── -->
+        <Line endX="180" endY="620" opacity="0.10" startX="0" startY="380" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="140" endY="620" opacity="0.08" startX="0" startY="420" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="100" endY="620" opacity="0.06" startX="0" startY="460" stroke="#C9A84C" strokeWidth="0.8" />
+        <Line endX="220" endY="620" opacity="0.06" startX="0" startY="340" stroke="#C9A84C" strokeWidth="0.8" />
+
+        <!-- ── Líneas horizontales tipo cuaderno (originales mejoradas) ── -->
+        <Line endX="820" endY="200" opacity="0.35" startX="80" startY="200" stroke="#6A5828" strokeWidth="1" />
+        <Line endX="820" endY="240" opacity="0.22" startX="80" startY="240" stroke="#6A5828" strokeWidth="0.8" />
+        <Line endX="820" endY="400" opacity="0.35" startX="80" startY="400" stroke="#6A5828" strokeWidth="1" />
+        <Line endX="820" endY="440" opacity="0.22" startX="80" startY="440" stroke="#6A5828" strokeWidth="0.8" />
+
+        <!-- ── NUEVO: Constelación de puntos dorados ── -->
+        <!-- Racimo superior izquierdo -->
+        <Circle centerX="155" centerY="155" fill="#C9A84C" opacity="0.55" radius="2.0" />
+        <Circle centerX="172" centerY="142" fill="#C9A84C" opacity="0.40" radius="1.4" />
+        <Circle centerX="168" centerY="170" fill="#C9A84C" opacity="0.45" radius="1.8" />
+        <Circle centerX="190" centerY="158" fill="#C9A84C" opacity="0.30" radius="1.2" />
+        <Circle centerX="148" centerY="178" fill="#C9A84C" opacity="0.28" radius="1.0" />
+        <!-- Racimo superior derecho -->
+        <Circle centerX="755" centerY="90" fill="#C9A84C" opacity="0.50" radius="2.2" />
+        <Circle centerX="772" centerY="75" fill="#C9A84C" opacity="0.38" radius="1.5" />
+        <Circle centerX="740" centerY="102" fill="#C9A84C" opacity="0.42" radius="1.8" />
+        <Circle centerX="790" centerY="88" fill="#C9A84C" opacity="0.28" radius="1.2" />
+        <Circle centerX="765" centerY="112" fill="#C9A84C" opacity="0.25" radius="1.0" />
+        <!-- Racimo inferior derecho -->
+        <Circle centerX="820" centerY="470" fill="#C9A84C" opacity="0.45" radius="2.0" />
+        <Circle centerX="840" centerY="488" fill="#C9A84C" opacity="0.35" radius="1.5" />
+        <Circle centerX="808" centerY="490" fill="#C9A84C" opacity="0.40" radius="1.8" />
+        <Circle centerX="855" centerY="472" fill="#C9A84C" opacity="0.28" radius="1.2" />
+        <!-- Puntos sueltos dispersos -->
+        <Circle centerX="60" centerY="310" fill="#C9A84C" opacity="0.30" radius="1.5" />
+        <Circle centerX="878" centerY="200" fill="#C9A84C" opacity="0.28" radius="1.5" />
+        <Circle centerX="300" centerY="60" fill="#C9A84C" opacity="0.25" radius="1.2" />
+        <Circle centerX="600" centerY="570" fill="#C9A84C" opacity="0.28" radius="1.5" />
+        <Circle centerX="200" centerY="550" fill="#C9A84C" opacity="0.22" radius="1.2" />
+
+        <!-- ── NUEVO: Diamantes ornamentales flotantes ── -->
+        <!-- Esquina superior izquierda: grupo de diamantes -->
+        <Text opacity="0.38" style="-fx-font-size: 7px;  -fx-fill: #C9A84C;" text="◆" x="52" y="82" />
+        <Text opacity="0.28" style="-fx-font-size: 5px;  -fx-fill: #C9A84C;" text="◆" x="72" y="65" />
+        <Text opacity="0.22" style="-fx-font-size: 4px;  -fx-fill: #C9A84C;" text="◆" x="38" y="105" />
+        <!-- Esquina superior derecha: diamantes -->
+        <Text opacity="0.32" style="-fx-font-size: 8px;  -fx-fill: #C9A84C;" text="◆" x="848" y="52" />
+        <Text opacity="0.24" style="-fx-font-size: 5px;  -fx-fill: #C9A84C;" text="◆" x="830" y="70" />
+        <Text opacity="0.20" style="-fx-font-size: 4px;  -fx-fill: #C9A84C;" text="◆" x="868" y="72" />
+        <!-- Esquina inferior izquierda: diamantes -->
+        <Text opacity="0.30" style="-fx-font-size: 7px;  -fx-fill: #C9A84C;" text="◆" x="55" y="528" />
+        <Text opacity="0.22" style="-fx-font-size: 4px;  -fx-fill: #C9A84C;" text="◆" x="42" y="548" />
+        <Text opacity="0.20" style="-fx-font-size: 5px;  -fx-fill: #C9A84C;" text="◆" x="72" y="540" />
+        <!-- Esquina inferior derecha: diamantes -->
+        <Text opacity="0.32" style="-fx-font-size: 8px;  -fx-fill: #C9A84C;" text="◆" x="840" y="525" />
+        <Text opacity="0.24" style="-fx-font-size: 5px;  -fx-fill: #C9A84C;" text="◆" x="860" y="548" />
+        <Text opacity="0.20" style="-fx-font-size: 4px;  -fx-fill: #C9A84C;" text="◆" x="820" y="552" />
+
+        <!-- ── Íconos decorativos originales mejorados ── -->
+        <Text opacity="0.20" style="-fx-font-size: 28px;" text="✏️" x="750" y="130" />
+        <Text opacity="0.18" style="-fx-font-size: 26px;" text="📝" x="100" y="510" />
+        <Text opacity="0.16" style="-fx-font-size: 24px;" text="⌨️" x="800" y="490" />
+        <Text opacity="0.22" style="-fx-font-size: 20px;" text="✨" x="50" y="160" />
+        <Text opacity="0.18" style="-fx-font-size: 18px;" text="⭐" x="820" y="300" />
+
+        <!-- ── NUEVO: Ornamentos ✦ dispersos muy sutiles ── -->
+        <Text opacity="0.18" style="-fx-font-size: 10px; -fx-fill: #C9A84C;" text="✦" x="108" y="295" />
+        <Text opacity="0.16" style="-fx-font-size: 8px;  -fx-fill: #C9A84C;" text="✦" x="792" y="385" />
+        <Text opacity="0.14" style="-fx-font-size: 6px;  -fx-fill: #C9A84C;" text="✦" x="45" y="395" />
+        <Text opacity="0.14" style="-fx-font-size: 7px;  -fx-fill: #C9A84C;" text="✦" x="855" y="155" />
+    </Pane>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONTENEDOR PRINCIPAL — 100% IGUAL AL ORIGINAL
+    ═══════════════════════════════════════════════════════ -->
+    <VBox alignment="TOP_CENTER" spacing="0" style="-fx-background-color: transparent;">
+
+        <!-- ── BARRA SUPERIOR ── -->
+        <!-- MEJORA: se añade un segundo borde inferior muy delgado dorado -->
+        <HBox alignment="CENTER_LEFT" prefHeight="64" prefWidth="900" style="-fx-background-color: #14141C;                      -fx-border-color: transparent transparent #C9A84C transparent;                      -fx-border-width: 0 0 1 0;">
+            <effect>
+                <DropShadow color="#000000" offsetY="3" radius="10" spread="0.05" />
+            </effect>
+            <padding>
+                <Insets left="32" right="32" />
+            </padding>
+
+            <!-- Logo / Título -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Text fill="#f8f7f7" style="-fx-font-size: 26px;" text="✏️" />
+                <Text style="-fx-font-family: 'Georgia';                              -fx-font-size: 20px;                              -fx-font-weight: bold;                              -fx-fill: #C9A84C;" text="Escritura Rápida" />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <!-- NUEVO: pequeños ornamentos ◆ junto al logo (a la izq del badge) -->
+            <Text style="-fx-font-size: 7px; -fx-fill: #C9A84C; -fx-opacity: 0.40;" text="◆" />
+            <Region prefWidth="10" />
+
+            <!-- Nivel badge -->
+            <HBox alignment="CENTER" spacing="6" style="-fx-background-color: #22201A;                          -fx-background-radius: 20;                          -fx-border-color: #C9A84C;                          -fx-border-radius: 20;                          -fx-border-width: 1;                          -fx-padding: 6 16 6 16;">
+                <Text style="-fx-font-size: 14px;" text="🏆" />
+                <Text style="-fx-font-family: 'Georgia';                              -fx-font-size: 13px;                              -fx-fill: #8890A0;" text="Nivel" />
+                <Text fx:id="labelNivel" style="-fx-font-family: 'Georgia';                              -fx-font-size: 16px;                              -fx-font-weight: bold;                              -fx-fill: #C9A84C;" text="01" />
+            </HBox>
+
+            <Region prefWidth="16" />
+
+            <!-- Botón cerrar -->
+            <Button style="-fx-background-color: #2E2018;                            -fx-background-radius: 50;                            -fx-text-fill: #C9784C;                            -fx-font-size: 14px;                            -fx-min-width: 34; -fx-min-height: 34;                            -fx-cursor: hand;                            -fx-border-color: transparent;" text="✕" />
+        </HBox>
+
+        <!-- Línea decorativa dorada ultra-fina debajo del navbar -->
+        <Pane mouseTransparent="true" prefHeight="2" prefWidth="900" style="-fx-background-color: transparent;">
+            <Line endX="900" endY="1" opacity="0.20" startX="0" startY="1" stroke="#C9A84C" strokeWidth="1" />
+        </Pane>
+
+        <!-- ── ZONA CENTRAL ── -->
+        <StackPane VBox.vgrow="ALWAYS">
+
+            <!-- NUEVO: Segunda sombra/halo detrás de la tarjeta, para profundidad -->
+            <Circle centerX="450" centerY="240" fill="#C9A84C" mouseTransparent="true" opacity="0.04" radius="230" />
+
+            <!-- Tarjeta central — igual al original, borde ligeramente más brillante -->
+            <VBox alignment="CENTER" maxHeight="420" maxWidth="560" spacing="28" style="-fx-background-color: #26262E;                          -fx-background-radius: 28;                          -fx-border-color: #C9A84C;                          -fx-border-radius: 28;                          -fx-border-width: 1;                          -fx-padding: 40 48 40 48;">
+                <effect>
+                    <DropShadow color="#C9A84C" offsetY="4" radius="32" spread="0.04" />
+                </effect>
+
+                <!-- Temporizador -->
+                <VBox alignment="CENTER" spacing="6">
+                    <HBox alignment="CENTER" spacing="10">
+                        <Text style="-fx-font-size: 18px;" text="⏱" />
+                        <Text fx:id="labelTiempo" style="-fx-font-family: 'Georgia';                                      -fx-font-size: 42px;                                      -fx-font-weight: bold;                                      -fx-fill: #C9A84C;" text="20" />
+                        <Text style="-fx-font-family: 'Georgia';                                      -fx-font-size: 16px;                                      -fx-fill: #606878;" text="seg" />
+                    </HBox>
+                    <ProgressBar fx:id="progressTiempo" prefHeight="10" prefWidth="380" progress="1.0" style="-fx-accent: #C9A84C;                                         -fx-background-color: #343440;                                         -fx-background-radius: 8;                                         -fx-control-inner-background: #343440;" />
+                </VBox>
+
+                <!-- MEJORA: Separador más ornamentado ◇ ✦ ◇ con líneas más largas -->
+                <HBox alignment="CENTER" spacing="6">
+                    <Line endX="80" endY="0" startX="0" startY="0" stroke="#5A4A1A" strokeWidth="1" />
+                    <Text style="-fx-font-size: 9px; -fx-fill: #8A7030;" text="◇" />
+                    <Line endX="20" endY="0" startX="0" startY="0" stroke="#7A6830" strokeWidth="1" />
+                    <Text style="-fx-font-size: 13px; -fx-fill: #C9A84C;" text="✦" />
+                    <Line endX="20" endY="0" startX="0" startY="0" stroke="#7A6830" strokeWidth="1" />
+                    <Text style="-fx-font-size: 9px; -fx-fill: #8A7030;" text="◇" />
+                    <Line endX="80" endY="0" startX="0" startY="0" stroke="#5A4A1A" strokeWidth="1" />
+                </HBox>
+
+                <!-- Instrucción -->
+                <Text style="-fx-font-family: 'Georgia';                              -fx-font-size: 14px;                              -fx-fill: #606878;" text="Escribe la siguiente palabra:" />
+
+                <!-- MEJORA: Post-it con doble marco interior -->
+                <StackPane>
+                    <!-- Marco exterior (sombra) -->
+                    <Rectangle arcHeight="18" arcWidth="18" fill="#C9A84C" height="86" opacity="0.10" width="386">
+                        <effect>
+                            <DropShadow color="#C9A84C" offsetY="0" radius="8" spread="0.06" />
+                        </effect>
+                    </Rectangle>
+                    <!-- Rectángulo principal -->
+                    <Rectangle arcHeight="16" arcWidth="16" fill="#2E2C20" height="80" stroke="#C9A84C" strokeWidth="1.5" width="380">
+                        <effect>
+                            <DropShadow color="#000000" offsetY="4" radius="12" spread="0.05" />
+                        </effect>
+                    </Rectangle>
+                    <!-- Marco interior delgado (inner frame) -->
+                    <Rectangle arcHeight="12" arcWidth="12" fill="transparent" height="70" opacity="0.50" stroke="#8A7030" strokeWidth="0.8" width="370" />
+                    <!-- Palabra -->
+                    <Text fx:id="labelPalabra" style="-fx-font-family: 'Georgia';                                  -fx-font-size: 28px;                                  -fx-font-weight: bold;                                  -fx-fill: #E8E4CC;" text="programación" />
+                </StackPane>
+
+                <!-- Campo de texto -->
+                <VBox alignment="CENTER" spacing="8">
+                    <TextField fx:id="campoRespuesta" prefHeight="46" prefWidth="380" promptText="Escribe aquí..." style="-fx-font-family: 'Georgia';                                       -fx-font-size: 17px;                                       -fx-background-color: #1E1E28;                                       -fx-background-radius: 12;                                       -fx-border-color: #44402A;                                       -fx-border-radius: 12;                                       -fx-border-width: 2;                                       -fx-text-fill: #E8EAF0;                                       -fx-padding: 8 16 8 16;" />
+                    <HBox alignment="CENTER" spacing="6">
+                        <Text fx:id="iconFeedback" style="-fx-font-size: 15px;" text="✅" visible="false" />
+                        <Text fx:id="labelFeedback" style="-fx-font-family: 'Georgia';                                      -fx-font-size: 14px;                                      -fx-fill: #70C870;                                      -fx-font-weight: bold;" text="" />
+                    </HBox>
+                </VBox>
+
+                <!-- Botón validar — gradiente dorado, igual al original -->
+                <Button fx:id="btnValidar" prefHeight="46" prefWidth="220" style="-fx-background-color: linear-gradient(to right, #8A6818, #C9A84C);                                -fx-background-radius: 23;                                -fx-text-fill: #1C1810;                                -fx-font-family: 'Georgia';                                -fx-font-size: 15px;                                -fx-font-weight: bold;                                -fx-cursor: hand;                                -fx-border-color: #E0C070;                                -fx-border-radius: 23;                                -fx-border-width: 0.8;" text="✔  Validar  ( Enter )">
+                    <effect>
+                        <DropShadow color="#8A6818" offsetY="4" radius="14" spread="0.10" />
+                    </effect>
+                </Button>
+
+            </VBox>
+        </StackPane>
+
+        <!-- Línea decorativa dorada ultra-fina sobre el footer -->
+        <Pane mouseTransparent="true" prefHeight="2" prefWidth="900" style="-fx-background-color: transparent;">
+            <Line endX="900" endY="1" opacity="0.20" startX="0" startY="1" stroke="#C9A84C" strokeWidth="1" />
+        </Pane>
+
+        <!-- ── BARRA INFERIOR ── -->
+        <HBox alignment="CENTER" prefHeight="52" prefWidth="900" spacing="40" style="-fx-background-color: #14141C;                      -fx-border-color: #C9A84C transparent transparent transparent;                      -fx-border-width: 1 0 0 0;">
+
+            <HBox alignment="CENTER" spacing="6">
+                <Text fill="#27d372" style="-fx-font-size: 15px;" text="🎯" />
+                <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 13px; -fx-fill: #606878;" text="Aciertos:" />
+                <Text fx:id="labelAciertos" style="-fx-font-family: 'Georgia'; -fx-font-size: 14px;                              -fx-font-weight: bold; -fx-fill: #A8B4C0;" text="0" />
+            </HBox>
+
+            <!-- MEJORA: separador ◆ en lugar de punto plano -->
+            <Text style="-fx-fill: #5A4A1A; -fx-font-size: 9px;" text="◆" />
+
+            <HBox alignment="CENTER" spacing="6">
+                <Text fill="#27d372" style="-fx-font-size: 14px;" text="⚡" />
+                <Text style="-fx-font-family: 'Georgia'; -fx-font-size: 13px; -fx-fill: #606878;" text="Tiempo promedio:" />
+                <Text fx:id="labelPromedio" style="-fx-font-family: 'Georgia'; -fx-font-size: 14px;                              -fx-font-weight: bold; -fx-fill: #A8B4C0;" text="— s" />
+            </HBox>
+
+            <Text style="-fx-fill: #5A4A1A; -fx-font-size: 9px;" text="◆" />
+
+            <!-- Botón reiniciar -->
+            <Button fx:id="btnReiniciar" style="-fx-background-color: #2A2418;                            -fx-background-radius: 16;                            -fx-text-fill: #C9A84C;                            -fx-font-family: 'Georgia';                            -fx-font-size: 13px;                            -fx-font-weight: bold;                            -fx-cursor: hand;                            -fx-border-color: #C9A84C;                            -fx-border-radius: 16;                            -fx-border-width: 1;                            -fx-padding: 7 18 7 18;" text="↺  Reiniciar" />
+        </HBox>
+    </VBox>
+</StackPane>
