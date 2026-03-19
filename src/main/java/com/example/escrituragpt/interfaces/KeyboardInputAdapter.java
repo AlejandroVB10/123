@@ -48,6 +48,7 @@ public class KeyboardInputAdapter implements EventHandler<KeyEvent> {
      *
      * @param event the {@link KeyEvent} fired by JavaFX
      */
+    // Only react to the Enter key; ignore all other keys
     @Override
     public void handle(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
